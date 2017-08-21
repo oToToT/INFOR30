@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url(font-awesome.min.css);
 @import "https://fonts.googleapis.com/css?family=Raleway:100,300,600";
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 
 /*
 Theory by TEMPLATED
@@ -1879,6 +1880,9 @@ header h6 + p {
     font-size: 0.9em;
     margin-top: -0.6em;
 }
+.chinese{
+    font-family: 'Noto Sans TC', sans-serif;
+}
 
 /* Flex */
 
@@ -1918,11 +1922,23 @@ header h6 + p {
     top: -1em;
     right: -1em;
     pointer-events: none;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0.8px 0.5px 1px 1px rgba(0, 0, 0, 0.2);
+    background-color: rgba(210, 210, 210, 0.1);
 }
 
 .flex.flex-4 .box {
     width: 21%;
+}
+.flex .box.spotlight{
+    width: 100%;
+}
+.flex .box.spotlight .content{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.flex .box.spotlight .content p{
+    text-align: left;
 }
 
 @media screen and (max-width: 980px) {
