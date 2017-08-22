@@ -209,8 +209,7 @@
                             title: '<%= val.title %>',
                             text: '<%= val.text %>',
                             imageUrl: 'images/<%= val.img %>'
-                        });
-                        //$("#header").hide().show(0);
+                        }).catch(swal.noop);
                     });
                 <% }); %>
         })(jQuery);
