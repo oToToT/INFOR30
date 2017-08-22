@@ -5,24 +5,22 @@
     Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html>
-
-<head>
-    <title>INFOR</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="images/favicon.ico" rel="SHORTCUT ICON">
-    <link rel="stylesheet" href="/css/main.css" />
-</head>
-
-<body>
-    <%- include('header'); %>
+    <head>
+        <title>INFOR</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="images/favicon.ico" rel="SHORTCUT ICON">
+        <link rel="stylesheet" href="/css/main.css" />
+    </head>
+    <body>
+        <%- include('header'); %>
         <!-- Banner -->
         <section id="banner">
             <h1>INFOR</h1>
             <p class="chinese">
-                台北市立建國高級中學
-                <br> TAIPEI MUNICIPAL CHIEN KUO HIGH SCHOOL
-                <br> 資訊社
+            台北市立建國高級中學
+            <br> TAIPEI MUNICIPAL CHIEN KUO HIGH SCHOOL
+            <br> 資訊社
             </p>
         </section>
 
@@ -42,8 +40,8 @@
                             <div class="chinese">
                                 <h3>學術交流</h3>
                                 <p>
-                                    建中資訊社為本校最大的社團之一，因而聚集了各種領域的專才。
-                                    <br> 在專案小組或是研討會中，互相分享每個人的知識與想法，促使我們能製造出創新的成果。
+                                建中資訊社為本校最大的社團之一，因而聚集了各種領域的專才。
+                                <br> 在專案小組或是研討會中，互相分享每個人的知識與想法，促使我們能製造出創新的成果。
                                 </p>
                             </div>
                         </div>
@@ -56,8 +54,8 @@
                             <div class="chinese">
                                 <h3>社團活動</h3>
                                 <p>
-                                    建中資訊社與全台近百個社團結為友社，並主要與楓資及景資一起主辦活動。
-                                    <br> 除了常態的聯合社課以外，還有定期的暑訓、迎新、秋遊、寒訓和春遊等大型活動。
+                                建中資訊社與全台近百個社團結為友社，並主要與楓資及景資一起主辦活動。
+                                <br> 除了常態的聯合社課以外，還有定期的暑訓、迎新、秋遊、寒訓和春遊等大型活動。
                                 </p>
                             </div>
                         </div>
@@ -88,7 +86,7 @@
                         </header>
                         <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu.</p>
                         <footer>
-                            <a href="#" class="button special">More</a>
+                            <a id="cpp" class="button special">More</a>
                         </footer>
                     </article>
                     <article>
@@ -97,7 +95,7 @@
                         </header>
                         <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu.</p>
                         <footer>
-                            <a href="#" class="button special">More</a>
+                            <a id="webdesign" class="button special">More</a>
                         </footer>
                     </article>
                     <article>
@@ -106,7 +104,7 @@
                         </header>
                         <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu.</p>
                         <footer>
-                            <a href="#" class="button special">More</a>
+                            <a id="python" class="button special">More</a>
                         </footer>
                     </article>
                 </div>
@@ -117,7 +115,7 @@
                         </header>
                         <p>演算法是資訊領域中重要的</p>
                         <footer>
-                            <a href="#" class="button special">More</a>
+                            <a id="algorithm" class="button special">More</a>
                         </footer>
                     </article>
                     <article>
@@ -126,16 +124,16 @@
                         </header>
                         <p>演算法是資訊領域中重要的</p>
                         <footer>
-                            <a href="#" class="button special">More</a>
+                            <a id="java" class="button special">More</a>
                         </footer>
                     </article>
                     <article>
                         <header>
                             <h3>其他小專題</h3>
                         </header>
-                        <p>平時的社課會帶大家探索更多資訊領域的相關內容</p>
+                        <p>時間：哈哈哈</p>
                         <footer>
-                            <a href="#" class="button special">More</a>
+                            <a id="others" class="button special">More</a>
                         </footer>
                     </article>
 
@@ -193,13 +191,31 @@
                 </div>
             </div>
         </footer>
-
+        <link rel="stylesheet" href="css/sweetalert2.min.css" />
         <!-- Scripts -->
         <script src="js/jquery.min.js"></script>
         <script src="js/skel.min.js"></script>
         <script src="js/jquery.scrollex.min.js"></script>
+        <script src="js/sweetalert2.min.js"></script>
         <script src="js/util.js"></script>
         <script src="js/main.js"></script>
-</body>
+        
+        <% if(typeof Course != "undefined"){ %>
+        <script>
+        (function($) {
+            <% Course.forEach(function(val, index, arr){ %>
+                    $("#<%= val.id %>").click(function() {
+                        swal({
+                            title: '<%= val.title %>',
+                            text: '<%= val.text %>',
+                            imageUrl: 'images/<%= val.img %>'
+                        });
+                        //$("#header").hide().show(0);
+                    });
+                <% }); %>
+        })(jQuery);
+        </script>
+        <% } %>
+    </body>
 
 </html>
