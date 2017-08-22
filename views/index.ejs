@@ -5,25 +5,77 @@
     Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html>
-    <head>
-        <title>INFOR</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="images/favicon.ico" rel="SHORTCUT ICON">
-        <link rel="stylesheet" href="/css/main.css" />
-    </head>
-    <body>
-        <%- include('header'); %>
+
+<head>
+    <title>INFOR</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="images/favicon.ico" rel="SHORTCUT ICON">
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body>
+    <%- include('header'); %>
         <!-- Banner -->
         <section id="banner">
             <h1>INFOR</h1>
             <p class="chinese">
-            台北市立建國高級中學
-            <br>
-            TAIPEI MUNICIPAL CHIEN KUO HIGH SCHOOL
-            <br>
-            資訊社
+                台北市立建國高級中學
+                <br> TAIPEI MUNICIPAL CHIEN KUO HIGH SCHOOL
+                <br> 資訊社
             </p>
+        </section>
+
+        <!-- Two -->
+        <section id="two" class="wrapper style1 special">
+            <div class="inner">
+                <header>
+                    <h2 class="chinese">社團宗旨</h2>
+                    <p class="chinese">我們涉獵各式資訊領域也積極對外交流</p>
+                </header>
+                <div class="flex flex-3">
+                    <div class="box spotlight">
+                        <div class="image left">
+                            <img src="images/class.jpg" alt="上課" />
+                        </div>
+                        <div class="content">
+                            <div class="chinese">
+                                <h3>學術交流</h3>
+                                <p>
+                                    建中資訊社為本校最大的社團之一，因而聚集了各種領域的專才。
+                                    <br> 在專案小組或是研討會中，互相分享每個人的知識與想法，促使我們能製造出創新的成果。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box spotlight">
+                        <div class="image right">
+                            <img src="images/activity.jpg" alt="活動" />
+                        </div>
+                        <div class="content">
+                            <div class="chinese">
+                                <h3>社團活動</h3>
+                                <p>
+                                    建中資訊社與全台近百個社團結為友社，並主要與楓資及景資一起主辦活動。
+                                    <br> 除了常態的聯合社課以外，還有定期的暑訓、迎新、秋遊、寒訓和春遊等大型活動。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box spotlight">
+                        <div class="image left">
+                            <img src="images/future.jpg" alt="未來期許" />
+                        </div>
+                        <div class="content">
+                            <div class="chinese">
+                                <h3>未來領航</h3>
+                                <p>建中資訊社在全台灣至全世界佈下資訊科技的人才，我們不只侷限於僅僅一個高中的社團，更放眼至全世界最頂尖的資訊社群。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- One -->
@@ -91,62 +143,8 @@
             </div>
         </section>
 
-        <!-- Two -->
-        <section id="two" class="wrapper style1 special">
-            <div class="inner">
-                <header>
-                    <h2 class="chinese">社團宗旨</h2>
-                    <p class="chinese">我們涉獵各式資訊領域也積極對外交流</p>
-                </header>
-                <div class="flex flex-3">
-                    <div class="box spotlight">
-                        <div class="image left">
-                            <img src="images/class.jpg" alt="上課" />
-                        </div>
-                        <div class="content">
-                            <div class="chinese">
-                                <h3>學術交流</h3>
-                                <p>
-                                建中資訊社為本校最大的社團之一，因而聚集了各種領域的專才。
-                                <br>
-                                在專案小組或是研討會中，互相分享每個人的知識與想法，促使我們能製造出創新的成果。
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box spotlight">
-                        <div class="image right">
-                            <img src="images/activity.jpg" alt="活動" />
-                        </div>
-                        <div class="content">
-                            <div class="chinese">
-                                <h3>社團活動</h3>
-                                <p>
-                                建中資訊社與全台近百個社團結為友社，並主要與楓資及景資一起主辦活動。
-                                <br>
-                                除了常態的聯合社課以外，還有定期的暑訓、迎新、秋遊、寒訓和春遊等大型活動。
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box spotlight">
-                        <div class="image left">
-                            <img src="images/future.jpg" alt="未來期許" />
-                        </div>
-                        <div class="content">
-                            <div class="chinese">
-                                <h3>未來領航</h3>
-                                <p>建中資訊社在全台灣至全世界佈下資訊科技的人才，我們不只侷限於僅僅一個高中的社團，更放眼至全世界最頂尖的資訊社群。
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Three -->
-        <section id="three" class="wrapper special">
+        <section id="three" class="wrapper special style2">
             <div class="inner chinese">
                 <header class="align-center">
                     <h2>各式活動</h2>
@@ -202,5 +200,6 @@
         <script src="js/util.js"></script>
         <script src="js/main.js"></script>
 
-    </body>
+</body>
+
 </html>
