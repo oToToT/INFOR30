@@ -2755,6 +2755,24 @@ button:disabled,
     z-index: 10003;
 }
 
+#header.alt {
+    transition: 0.3s;
+    color: #1e1f1f;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+}
+
+#header.alt a:hover {
+    color: #000000;
+}
+
+#header.alt .logo {
+    color: #000000;
+    font-size: 1.5em;
+}
+
 #header a.navPanelToggle .fa {
     font-size: 1.25em;
 }
