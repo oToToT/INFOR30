@@ -1753,7 +1753,7 @@ article.wrapper article header {
 
 section.wrapper.style1,
 article.wrapper.style1 {
-    background: #5385c1;
+    background: #334358;
     color: #bacee6;
 }
 
@@ -1897,6 +1897,7 @@ header h6+p {
 
 .flex .box.spotlight {
     width: 100%;
+    font-size: 1.4em;
 }
 
 .flex .box.spotlight .content {
@@ -1951,6 +1952,9 @@ header h6+p {
 @media screen and (max-width: 480px) {
     .flex.flex-4 .box {
         width: 100%;
+    }
+    .flex .box.spotlight{
+        font-size: 1em;
     }
 }
 
